@@ -12,7 +12,7 @@
 <body>
 
   <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
+    <!--<include src="build/img/sprite.svg"></include>-->
   </div>
 
   <header class="page-header container">
@@ -30,10 +30,10 @@
 
     <div class="page-header__wrapper-mid">
       <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <p class="page-header__contacts contacts">
+      <div class="page-header__contacts contacts">
         <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
         <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      </p>
+      </div>
 
       <ul class="user-navigation">
         <li class="user-navigation__item">
@@ -71,6 +71,72 @@
       </ul>
     </nav>
   </header>
+
+  <main class="page-main container">
+    <section class="promo-categories">
+      <h2 class="visually-hidden">Популярные категории</h2>
+
+      <ul class="promo-categories__list">
+        <li class="promo-categories__item promo promo--materials promo--new">
+          <h3 class="promo__title">Материалы</h3>
+          <a href="#" class="button promo__btn">На любой вкус</a>
+        </li>
+        <li class="promo-categories__item promo promo-tools">
+          <h3 class="promo__title">Инструменты</h3>
+          <a href="#" class="button promo__btn">На все случаи</a>
+        </li>
+        <li class="promo-categories__item promo promo--tech">
+          <h3 class="promo__title">Техника</h3>
+          <a href="#" class="button promo__btn">Для стройки</a>
+        </li>
+        <li class="promo-categories__item promo promo--sale">
+          <h3 class="promo__title">Скидки 50%</h3>
+          <a href="#" class="button promo__btn">На 350 товаров</a>
+        </li>
+        <li class="promo-categories__item promo promo--delivery">
+          <h3 class="promo__title">Доставка</h3>
+          <a href="#" class="button promo__btn">Бесплатно</a>
+        </li>
+      </ul>
+
+      <div class="slider">
+        <div class="slider__controls">
+          <button type="button" class="control control--prev">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button type="button" class="control control--next">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+
+          <ul class="slider__toggle toggle">
+            <li class="toggle__item">
+              <button type="button" class="toggle__dot"></button>
+              <button type="button" class="toggle__dot toggle-dot--active"></button>
+            </li>
+            <li class="toggle__item"></li>
+          </ul>
+        </div>
+
+        <ul class="slider__slide-list">
+          <li class="slider__slide slide slide--drill">
+            <div class="slide__heading">
+              <h3 class="slide__title">Дрели</h3>
+              <b class="slide__slogan">Соседям на радость!</b>
+            </div>
+            <a href="#" class="button slide__catalog">Открыть каталог</a>
+          </li>
+          <li class="slider__slide slide slide--puncher">
+            <div class="slide__heading">
+              <h3 class="slide__title">Перфораторы</h3>
+              <b class="slide__slogan">Настоящие мужские игрушки</b>
+            </div>
+            <a href="#" class="button slide__catalog">Открыть каталог</a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </main>
 
   <script src="js/main.min.js"></script>
 </body>
