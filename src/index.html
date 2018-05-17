@@ -101,20 +101,17 @@
 
       <div class="slider">
         <div class="slider__controls">
-          <button type="button" class="control control--prev">
+          <button type="button" class="slider__control slider__control--prev">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button type="button" class="control control--next">
+          <button type="button" class="slider__control slider__control--next">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
 
-          <ul class="slider__toggle toggle">
-            <li class="toggle__item">
-              <button type="button" class="toggle__dot"></button>
-              <button type="button" class="toggle__dot toggle-dot--active"></button>
-            </li>
-            <li class="toggle__item"></li>
-          </ul>
+          <div class="slider__toggle">
+            <button type="button" class="slider__dot"></button>
+            <button type="button" class="slider__dot slider__dot--active"></button>
+          </div>
         </div>
 
         <ul class="slider__slide-list">
@@ -125,6 +122,7 @@
             </div>
             <a href="#" class="button slide__catalog">Открыть каталог</a>
           </li>
+
           <li class="slider__slide slide slide--puncher">
             <div class="slide__heading">
               <h3 class="slide__title">Перфораторы</h3>
@@ -133,7 +131,6 @@
             <a href="#" class="button slide__catalog">Открыть каталог</a>
           </li>
         </ul>
-
       </div>
     </section>
 
@@ -175,58 +172,93 @@
 
     <section class="popular-brands">
       <h2 class="popular-brands__title">Популярные производители:</h2>
-      <a href="" class="popular-brands__all-brands">Все производители</a>
+      <a href="#" class="popular-brands__all-brands">Все производители</a>
+
+      <ul class="popular-brands__list">
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="BOSCH">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="Makita">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="Dewalt">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="Интерскол">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="Hitachi">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="LG">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="AEG">
+          </a>
+        </li>
+
+        <li class="popular-brands__item">
+          <a href="#" class="popular-brands__link">
+            <img class="popular-brands__logo" src="" width="" height="" alt="Metabo">
+          </a>
+        </li>
+      </ul>
     </section>
 
-    <ul class="popular-brands__list">
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="BOSCH">
-        </a>
-      </li>
+    <section class="services">
+      <h2 class="services__title">Сервисы</h2>
+      <p class="services__description">Хороший интернет-магазин отличается от&nbsp;плохого не&nbsp;только ценами! Мы&nbsp;стараемся
+        изо всех сил, чтобы сделать ваши покупки приятными.</p>
+      <div class="services__controls">
+        <button class="services__button services__button--active">Доставка</button>
+        <button class="services__button">Гарантия</button>
+        <button class="services__button">Кредит</button>
+      </div>
 
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="Makita">
-        </a>
-      </li>
+      <ul class="services__list">
+        <li class="services__item services__item--active services__item--delivery">
+          <h3 class="services__service-title">Доставка</h3>
+          <p class="services__service-description">Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему
+            подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж!</p>
+        </li>
 
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="Dewalt">
-        </a>
-      </li>
+        <li class="services__item services__item--warranty">
+          <h3 class="services__service-title">Гарантия</h3>
+          <p class="services__service-description">Если купленный у&nbsp;нас товар поломается или заискрит, а&nbsp;также
+            в&nbsp;случае пожара, спровоцированного его возгаранием, вы&nbsp;всегда можете быть уверены в&nbsp;нашей
+            гарантии. Мы&nbsp;обменяем сгоревший товар на&nbsp;новый. Дом уж&nbsp;восстановите как-нибудь сами.</p>
+        </li>
 
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="Интерскол">
-        </a>
-      </li>
+        <li class="services__item services__item--credit">
+          <h3 class="services__service-title">Кредит</h3>
+          <p class="services__service-description">Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты
+            придут вам на&nbsp;помощь.</p>
+          <a href="#" class="services__btn button">Отправить заявку</a>
+        </li>
+      </ul>
 
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="Hitachi">
-        </a>
-      </li>
+    </section>
 
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="LG">
-        </a>
-      </li>
-
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="AEG">
-        </a>
-      </li>
-
-      <li class="popular-brands__item">
-        <a href="#" class="popular-brands__link">
-          <img class="popular-brands__logo" src="" width="" height="" alt="Metabo">
-        </a>
-      </li>
-    </ul>
   </main>
 
   <script src="js/main.min.js"></script>
