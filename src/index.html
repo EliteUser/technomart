@@ -15,6 +15,8 @@
     <!--<include src="build/img/sprite.svg"></include>-->
   </div>
 
+  <!-- Хедер -->
+
   <header class="page-header container">
     <div class="page-header__wrapper-top">
       <a class="logo logo--header">Техномарт</a>
@@ -72,7 +74,12 @@
     </nav>
   </header>
 
+  <!-- Основная часть -->
+
   <main class="page-main container">
+
+    <!-- Промо блоки -->
+
     <section class="promo-categories">
       <h2 class="visually-hidden">Популярные категории</h2>
 
@@ -134,6 +141,8 @@
       </div>
     </section>
 
+    <!-- Популярные товары -->
+
     <section class="popular-goods">
       <div class="popular-goods__heading">
         <h2 class="popular-goods__title">Популярные товары</h2>
@@ -169,6 +178,8 @@
         </li>
       </ul>
     </section>
+
+    <!-- Популярные производители -->
 
     <section class="popular-brands">
       <h2 class="popular-brands__title">Популярные производители:</h2>
@@ -225,6 +236,8 @@
       </ul>
     </section>
 
+    <!-- Сервисы -->
+
     <section class="services">
       <h2 class="services__title">Сервисы</h2>
       <p class="services__description">Хороший интернет-магазин отличается от&nbsp;плохого не&nbsp;только ценами! Мы&nbsp;стараемся
@@ -259,6 +272,9 @@
     </section>
 
     <div class="wrapper-row">
+
+      <!-- О нас -->
+
       <section class="about-us">
         <h2 class="about-us__title">Компания «Техномарт»</h2>
         <p class="about-us__description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
@@ -275,6 +291,8 @@
         <a href="" class="about-us__btn button">Подробнее о компании</a>
       </section>
 
+      <!-- Контакты -->
+
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис:</p>
@@ -286,6 +304,8 @@
       </section>
     </div>
   </main>
+
+  <!-- Футер -->
 
   <footer class="page-footer container">
     <div class="page-footer__top">
@@ -366,7 +386,49 @@
     </div>
   </footer>
 
+  <!-- Всплывающая карта -->
 
+  <section class="map-modal modal">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+
+    <button class="modal__close" id="map-close" type="button">
+      <span class="visually-hidden">Закрыть карту</span>
+    </button>
+    <!-- TODO iframe -->
+    <img class="map-modal__image" src="img/map-big.jpg" width="" height=""
+         alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+  </section>
+
+  <!-- Всплывающее окно -->
+
+  <section class="form-modal modal">
+    <h2 class="visually-hidden">Напишите нам</h2>
+
+    <button class="modal__close" id="form-close" type="button">
+      <span class="visually-hidden">Закрыть форму</span>
+    </button>
+
+    <form class="form-modal__form" method="post" action="https://echo.htmlacademy.ru">
+      <p class="form-modal__input">
+        <label class="form-modal__label" for="form-username">Ваше имя:</label>
+        <input class="form-modal__input" type="text" name="name" id="form-username"
+               placeholder="Представьтесь, пожалуйста">
+      </p>
+
+      <p class="form-modal__input">
+        <label class="form-modal__label" for="form-email">Ваш e-mail:</label>
+        <input class="form-modal__input" type="email" name="email" id="form-email" placeholder="Для отправки ответа">
+      </p>
+
+      <p class="form-modal__text">
+        <label class="form-modal__label" for="form-message">Текст письма:</label>
+        <textarea class="form-modal__textarea" name="message" id="form-message" cols="30" rows="7"
+                  placeholder="В свободной форме"></textarea>
+      </p>
+
+      <button class="form-modal__submit button" type="submit">Отправить</button>
+    </form>
+  </section>
 
   <script src="js/main.min.js"></script>
 </body>
