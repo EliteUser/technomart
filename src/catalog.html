@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <div style="display: none;">
+    <!--<include src="build/img/sprite.svg"></include>-->
+  </div>
+
+  <!-- Хедер -->
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header__wrapper-top">
+        <a href="index.html" class="logo logo--header">Техномарт</a>
+        <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
+          <label for="page-search" class="search-form__label">Поиск по сайту</label>
+          <input type="text" class="search-form__input" id="page-search" name="search-query">
+          <button type="submit" class="search-form__submit">Найти</button>
+        </form>
+        <p class="bookmarks">Закладки: 0</p>
+        <p class="cart cart--full">Корзина: 10</p>
+        <a href="#" class="order-btn">Оформить заказ</a>
+      </div>
+
+      <div class="page-header__wrapper-mid">
+        <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="page-header__contacts contacts">
+          <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
+          <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
+
+        <ul class="user-navigation">
+          <li class="user-navigation__item">
+            <a href="#" class="user-navigation__link user-navigation__link--profile">Равшан Джамшутович</a>
+          </li>
+
+          <li class="user-navigation__item">
+            <a href="#" class="user-navigation__link user-navigation__link--logout">
+              <span class="visually-hidden">Выйти</span>
+            </a>
+          </li>
+          <!-- TODO додумать стилизацию -->
+          <li class="user-navigation__item">
+            <a href="#" class="user-navigation__link">Мои заказы</a>
+          </li>
+
+          <li class="user-navigation__item">
+            <a href="#" class="user-navigation__link">Личный кабинет</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="site-navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Главная</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Компания</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="catalog.html" class="site-navigation__link">Каталог</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Новости</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Спецпредложения</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Доставка</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Основная часть -->
+
+  <main class="page-main">
+
+    <!-- Навигация -->
+
+    <ul class="breadcrumbs container">
+      <li class="breadcrumbs__item">
+        <a href="index.html" class="breadcrumbs__link breadcrumbs__link--index">
+          <span class="visually-hidden">Главная</span>
+        </a>
+      </li>
+
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Каталог</a>
+      </li>
+
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Инструмент</a>
+      </li>
+
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Перфораторы</a>
+      </li>
+    </ul>
+
+    <h2 class="catalog-title container">Перфораторы</h2>
+
+
+
+  </main>
+
+  <!--Футер -->
+
+  <footer class="page-footer container">
+    <div class="page-footer__top">
+      <div class="page-footer__wrapper">
+        <a href="index.html" class="logo logo--footer">Техномарт</a>
+
+        <nav class="site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer">Компания</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer">Новости</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="catalog.html" class="site-navigation__link site-navigation__link--footer">Каталог</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer">Доставка</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="page-footer__wrapper">
+        <div class="contacts">
+          <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
+          <!--TODO footer contacts-->
+        </div>
+
+        <nav class="site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer site-navigation__link--product">Материалы</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer site-navigation__link--product">Техника</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer site-navigation__link--product">Инструмент</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--footer site-navigation__link--product">Спецпредложения</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="page-footer__bottom">
+      <p class="page-footer__copyright">&copy; 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
+
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a href="" class="social__link"><span class="visually-hidden">VKontakte</span></a>
+        </li>
+
+        <li class="social__item">
+          <a href="" class="social__link"><span class="visually-hidden">Facebook</span></a>
+        </li>
+
+        <li class="social__item">
+          <a href="" class="social__link"><span class="visually-hidden">Instagram</span></a>
+        </li>
+      </ul>
+
+      <p class="feedback">Обратная связь:<br>
+        <a href="mailto:mail@htmlacademy.ru" class="feedback__link">mail@htmlacademy.ru</a>
+      </p>
+
+      <p class="developer">Разработано —<br>
+        <a href="https://htmlacademy.ru" class="developer__link">htmlacademy.ru</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
