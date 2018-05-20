@@ -1,0 +1,69 @@
+.head-btn {
+  position: relative;
+  display: block;
+  width: 150px;
+  padding: 12px 0 12px 17px;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  color: $text-light;
+
+  &:hover {
+    background-color: $page-darkblue-hover;
+
+    .head-btn__icon--bookmarks,
+    .head-btn__icon--cart {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    background-color: $page-darkblue-active;
+
+    .head-btn__icon--bookmarks,
+    .head-btn__icon--cart {
+      opacity: 0.5;
+    }
+  }
+}
+
+.head-btn__icon {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+}
+
+.head-btn__icon--bookmarks {
+  fill: $text-light;
+  opacity: 0.3;
+}
+
+.head-btn__icon--cart {
+  fill: $text-light;
+  opacity: 0.3;
+}
+
+.head-btn--order-btn {
+  padding-left: 0;
+  background-color: $btn-green;
+
+  &:hover {
+    background-color: $btn-green-hover;
+  }
+
+  &:active {
+    background-color: $btn-green-active;
+  }
+}
+
+.head-btn--full {
+  background-color: $page-red;
+
+  &:hover {
+    background-color: $page-red-hover;
+  }
+
+  &:active {
+    background-color: $page-red-active;
+  }
+}

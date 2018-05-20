@@ -1,0 +1,16 @@
+.page-header {
+  background-color: $page-light;
+}
+
+.page-header__wrapper-top {
+  background-color: $page-darkblue;
+}
+
+.page-header__wrapper-top > .container {
+  display: flex;
+}
+
+.page-header__wrapper-mid {
+  display: flex;
+  align-content: flex-start;
+}

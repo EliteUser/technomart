@@ -115,7 +115,7 @@ gulp.task("webp", function () {
 /* Сборка SVG спрайта */
 
 gulp.task("sprite", function () {
-  return gulp.src(`${config.src}/img/*.svg`)
+  return gulp.src(`${config.src}/img/icon-*.svg`)
     .pipe(plumber())
     .pipe(svgstore({
       inlineSvg: true

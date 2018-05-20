@@ -1,0 +1,29 @@
+.logo {
+  display: block;
+  width: 220px;
+  padding-top: 11px;
+  padding-bottom: 7px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-light;
+  background-color: $page-red;
+  box-shadow: 0 5px 0 0 $page-red-shadow;
+
+  &[href]:hover {
+    background-color: $page-red-hover;
+    box-shadow: 0 5px 0 0 $page-red-hover-shadow;
+  }
+
+  &[href]:active {
+    background-color: $page-red-active;
+    box-shadow: 0 5px 0 0 $page-red-active-shadow;
+  }
+}
+
+.logo--footer {
+  padding: 17px 0;
+  font-size: 30px;
+  line-height: 30px;
+}
