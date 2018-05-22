@@ -31,4 +31,14 @@
   color: $text-light;
   background-color: $page-blue;
   box-shadow: 0 5px 0 0 $page-darkblue;
+
+  &:hover {
+    background-color: $page-darkblue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #1d2739;
+    box-shadow: 0 5px 0 0 #1d2739;
+  }
 }

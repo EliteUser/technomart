@@ -1,0 +1,54 @@
+.promo {
+  position: relative;
+  flex-basis: 300px;
+  min-height: 123px;
+  margin-bottom: 20px;
+  padding: 21px 0 0 23px;
+}
+
+.promo__title {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $text-light;
+}
+
+.promo__btn {
+  width: 135px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.promo--materials {
+  background: $promo-yellow url("../img/promo-1.svg") no-repeat 213px 31px;
+}
+
+.promo--tools {
+  background: $promo-blue url("../img/promo-2.svg") no-repeat 197px 33px;
+}
+
+.promo--tech {
+  background: $promo-magenta url("../img/promo-3.svg") no-repeat 191px 31px;
+}
+
+.promo--sale {
+  background: $promo-green url("../img/promo-4.svg") no-repeat 196px 26px;
+}
+
+.promo--delivery {
+  background: $promo-yellow url("../img/promo-5.svg") no-repeat 191px 32px;
+}
+
+.promo--offset {
+  margin-left: 640px;
+}
+
+

@@ -111,19 +111,19 @@
           <h3 class="promo__title">Материалы</h3>
           <a href="#" class="button promo__btn">На любой вкус</a>
         </li>
-        <li class="promo-categories__item promo promo-tools">
-          <h3 class="promo__title">Инструменты</h3>
+        <li class="promo-categories__item promo promo--tools">
+          <h3 class="promo__title">Инструмент</h3>
           <a href="#" class="button promo__btn">На все случаи</a>
         </li>
         <li class="promo-categories__item promo promo--tech">
           <h3 class="promo__title">Техника</h3>
           <a href="#" class="button promo__btn">Для стройки</a>
         </li>
-        <li class="promo-categories__item promo promo--sale">
+        <li class="promo-categories__item promo promo--sale promo--offset">
           <h3 class="promo__title">Скидки 50%</h3>
           <a href="#" class="button promo__btn">На 350 товаров</a>
         </li>
-        <li class="promo-categories__item promo promo--delivery">
+        <li class="promo-categories__item promo promo--delivery promo--offset">
           <h3 class="promo__title">Доставка</h3>
           <a href="#" class="button promo__btn">Бесплатно</a>
         </li>
@@ -139,13 +139,17 @@
           </button>
 
           <div class="slider__toggle">
-            <button type="button" class="slider__dot"></button>
-            <button type="button" class="slider__dot slider__dot--active"></button>
+            <button type="button" class="slider__dot slider__dot--active">
+              <span class="visually-hidden">Слайд 1</span>
+            </button>
+            <button type="button" class="slider__dot">
+              <span class="visually-hidden">Слайд 2</span>
+            </button>
           </div>
         </div>
 
         <ul class="slider__slide-list">
-          <li class="slider__slide slide slide--drill">
+          <li class="slider__slide slide slide--drill slide--show">
             <div class="slide__heading">
               <h3 class="slide__title">Дрели</h3>
               <b class="slide__slogan">Соседям на радость!</b>
