@@ -22,11 +22,11 @@
       <div class="container">
         <a href="index.html" class="logo">Техномарт</a>
         <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
+          <label for="page-search" class="search-form__label visually-hidden">Поиск по сайту</label>
+          <input type="text" class="search-form__input" id="page-search" name="search-query" placeholder="Поиск:">
           <svg class="search-form__icon" width="17" height="17">
             <use xlink:href="#icon-search"/>
           </svg>
-          <label for="page-search" class="search-form__label visually-hidden">Поиск по сайту</label>
-          <input type="text" class="search-form__input" id="page-search" name="search-query" placeholder="Поиск:">
           <button type="submit" class="search-form__submit visually-hidden" tabindex="-1">Найти</button>
         </form>
         <a href="#" class="head-btn">
@@ -45,29 +45,41 @@
     </div>
 
     <div class="page-header__wrapper-mid container">
-      <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <h1 class="page-header__page-title page-title">Интернет-магазин строительных материалов и&nbsp;инструментов для
+        ремонта</h1>
       <div class="page-header__contacts contacts">
-        <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
+        <a href="tel:78125550555" class="contacts__telephone contacts__telephone--block">
+          <svg class="contacts__icon" width="19" height="19">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          +7 (812) 555-05-55</a>
         <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
       </div>
 
-      <ul class="user-navigation">
+      <ul class="user-navigation page-header__user-navigation">
         <li class="user-navigation__item">
-          <a href="#" class="user-navigation__link user-navigation__link--profile">Равшан Джамшутович</a>
+          <a href="#" class="user-navigation__link user-navigation__link--profile">
+            <svg class="user-navigation__icon" width="20" height="18">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+            Равшан Джамшутович</a>
         </li>
 
         <li class="user-navigation__item">
           <a href="#" class="user-navigation__link user-navigation__link--logout">
+            <svg class="user-navigation__icon" width="21" height="17">
+              <use xlink:href="#icon-logout"></use>
+            </svg>
             <span class="visually-hidden">Выйти</span>
           </a>
         </li>
-        <!-- TODO додумать стилизацию -->
+
         <li class="user-navigation__item">
-          <a href="#" class="user-navigation__link">Мои заказы</a>
+          <a href="#" class="user-navigation__link user-navigation__link--secondary user-navigation__link--dot">Мои заказы</a>
         </li>
 
         <li class="user-navigation__item">
-          <a href="#" class="user-navigation__link">Личный кабинет</a>
+          <a href="#" class="user-navigation__link user-navigation__link--secondary">Личный кабинет</a>
         </li>
       </ul>
     </div>
@@ -75,7 +87,7 @@
     <nav class="site-navigation container">
       <ul class="site-navigation__list">
         <li class="site-navigation__item">
-          <a href="#" class="site-navigation__link">Главная</a>
+          <a href="index.html" class="site-navigation__link">Главная</a>
         </li>
         <li class="site-navigation__item">
           <a href="#" class="site-navigation__link">Компания</a>

@@ -1,0 +1,30 @@
+.contacts {
+  width: 270px;
+}
+
+.contacts__telephone--block {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 9px 0 9px 73px;
+  margin-bottom: 4px;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $page-red;
+  border: 3px solid $text-light;
+}
+
+.contacts__icon {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+}
+
+.contacts__address {
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+  color: $page-blue;
+}

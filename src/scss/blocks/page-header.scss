@@ -11,6 +11,18 @@
 }
 
 .page-header__wrapper-mid {
+  padding: 46px 10px 0 63px;
+  margin-bottom: 39px;
   display: flex;
-  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.page-header__page-title {
+  margin: 3px 67px 0 0;
+  flex-shrink: 0;
+}
+
+.page-header__contacts {
+  margin-right: auto;
+  flex-shrink: 0;
 }
