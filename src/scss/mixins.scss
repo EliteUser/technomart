@@ -1,7 +1,9 @@
 @mixin fontCuprum {
   font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 @mixin fontSans {
   font-family: "PTSans", "Arial", sans-serif;
+  font-weight: 400;
 }

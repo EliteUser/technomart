@@ -1,0 +1,145 @@
+.product {
+  width: 220px;
+  margin: 0 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: $text-light;
+  border: 1px solid $product-border;
+
+  &:hover {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+    transition: all 0.2s;
+
+    .product__hover {
+      z-index: 1;
+    }
+  }
+}
+
+.product__wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 178px;
+}
+
+.product__image {
+  margin: auto;
+}
+
+.product__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 170px;
+  padding-top: 44px;
+  background-color: $text-light;
+}
+
+.product__buy-btn {
+  position: relative;
+  margin-bottom: 10px;
+  width: 135px;
+  background-color: $btn-green;
+  box-shadow: inset 0 -3px 0 0 $btn-green-shadow;
+
+  &:hover {
+    background-color: $btn-green-hover;
+
+    .product__cart-icon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    background-color: $btn-green-active;
+    box-shadow: inset 0 -3px 0 0 $btn-green-active;
+  }
+}
+
+.product__cart-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.product__bookmark {
+  width: 135px;
+  color: $page-blue;
+  background-color: transparent;
+  border: 3px solid $btn-green;
+
+  &:hover {
+    border-color: $page-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__name {
+  @include fontSans();
+
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  color: $text;
+  font-weight: 700;
+}
+
+.product__price-wrapper {
+  position: relative;
+  padding-top: 40px;
+}
+
+.product__price-old {
+  @include fontSans();
+
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  font-weight: 700;
+  color: $text-grey;
+}
+
+.product__price {
+  @include fontSans();
+
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  max-width: 134px;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $text-light;
+  background-color: $page-red;
+  border-radius: 3px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -26px;
+    content: "";
+    border: 19px solid $text-light;
+    border-left-color: $page-red;
+  }
+}
