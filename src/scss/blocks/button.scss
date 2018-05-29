@@ -9,4 +9,12 @@
   background-color: $page-red;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: $page-red-hover;
+  }
+
+  &:active {
+    background-color: $page-red-active;
+  }
 }
