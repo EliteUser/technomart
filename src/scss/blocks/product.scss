@@ -1,10 +1,9 @@
 .product {
   width: 220px;
-  margin: 0 10px;
   padding-bottom: 20px;
   text-align: center;
   background-color: $text-light;
-  border: 1px solid $product-border;
+  border: 1px solid $light-border;
 
   &:hover {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);

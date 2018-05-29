@@ -1,0 +1,25 @@
+.brand {
+  display: flex;
+  width: 220px;
+  height: 145px;
+  margin: 0 10px 20px;
+  border: 1px solid $light-border;
+
+  &:hover {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+    transition: all 0.1s;
+  }
+
+  &:active {
+    box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+    transition: all 0.1s;
+
+    .brand__logo {
+      opacity: 0.3;
+    }
+  }
+}
+
+.brand__logo {
+  margin: auto;
+}

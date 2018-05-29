@@ -17,4 +17,12 @@
 
 .section-heading__btn {
   width: 253px;
+
+  &:hover {
+    background-color: $page-red-hover;
+  }
+
+  &:active {
+    background-color: $page-red-active;
+  }
 }
