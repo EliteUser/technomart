@@ -398,55 +398,55 @@
 
   <footer class="page-footer">
     <div class="container">
-    <div class="page-footer__top">
-          <a class="logo logo--footer">Техномарт</a>
+      <div class="page-footer__top">
+        <a class="logo logo--footer">Техномарт</a>
 
-          <nav class="site-navigation page__footer__site-navigation">
-            <ul class="site-navigation__list">
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Компания</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Новости</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="catalog.html" class="site-navigation__link">Каталог</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Доставка</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="page-footer__middle">
-          <div class="contacts page-footer__contacts">
-            <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-            <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
-            <!--TODO footer contacts-->
-          </div>
-
-          <nav class="site-navigation page__footer__site-navigation">
-            <ul class="site-navigation__list">
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link site-navigation__link--product">Материалы</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link site-navigation__link--product">Техника</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link site-navigation__link--product">Инструмент</a>
-              </li>
-              <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link site-navigation__link--product">Спецпредложения</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="site-navigation page__footer__site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link">Компания</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link">Новости</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="catalog.html" class="site-navigation__link">Каталог</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link">Доставка</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+
+      <div class="page-footer__middle">
+        <div class="contacts page-footer__contacts">
+          <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
+          <!--TODO footer contacts-->
+        </div>
+
+        <nav class="site-navigation page__footer__site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--product">Материалы</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--product">Техника</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--product">Инструмент</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#" class="site-navigation__link site-navigation__link--product">Спецпредложения</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <div class="page-footer__bottom">
       <div class="container">
@@ -479,20 +479,22 @@
 
   <!-- Всплывающая карта -->
 
-  <section class="map-modal modal">
+  <section class="modal map-modal">
     <h2 class="visually-hidden">Как до нас добраться</h2>
 
     <button class="modal__close" id="map-close" type="button">
       <span class="visually-hidden">Закрыть карту</span>
     </button>
-    <!-- TODO iframe -->
+    <iframe class="map-modal__frame"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5963489855712!2d30.3207122!3d59.9388399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1527773951808"
+            width="940" height="446" allowfullscreen></iframe>
     <img class="map-modal__image" src="img/map-big.jpg" width="940" height="446"
          alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   </section>
 
   <!-- Всплывающее окно -->
 
-  <section class="form-modal modal">
+  <section class="modal form-modal modal--show">
     <h2 class="visually-hidden">Напишите нам</h2>
 
     <button class="modal__close" id="form-close" type="button">
@@ -523,7 +525,14 @@
 
   <!-- Добавление в корзину -->
 
-
+  <section class="modal cart-modal">
+    <button class="modal__close" id="cart-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
+    <a href="#" class=" button cart-modal__order">Оформить заказ</a>
+    <button class="button cart-modal__continue" id="cart-continue" type="button">Продолжить покупки</button>
+  </section>
 
   <script src="js/main.min.js"></script>
 </body>

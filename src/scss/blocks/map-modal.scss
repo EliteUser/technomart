@@ -1,0 +1,21 @@
+.map-modal {
+  width: 940px;
+  height: 446px;
+  box-shadow: 0 0 20px 0 rgba(47, 42, 43, 0.5);
+}
+
+.map-modal__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border: none;
+}
+
+.map-modal__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
