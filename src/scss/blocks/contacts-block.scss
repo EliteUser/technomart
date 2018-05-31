@@ -1,0 +1,28 @@
+.contacts-block {
+  margin-bottom: 86px;
+  padding-top: 78px;
+  max-width: 300px;
+}
+
+.contacts-block__title {
+  margin: 0 0 26px 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contacts-block__description {
+  @include fontSans();
+
+  margin: 0 0 33px 0;
+  max-width: 220px;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.contacts-block__map {
+  display: block;
+  margin-bottom: 36px;
+}
