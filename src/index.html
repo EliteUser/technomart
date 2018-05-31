@@ -426,7 +426,6 @@
         <div class="contacts page-footer__contacts">
           <address class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           <a href="tel:78125550555" class="contacts__telephone">+7 (812) 555-05-55</a>
-          <!--TODO footer contacts-->
         </div>
 
         <nav class="site-navigation page__footer__site-navigation">
@@ -494,7 +493,7 @@
 
   <!-- Всплывающее окно -->
 
-  <section class="modal form-modal modal--show">
+  <section class="modal form-modal">
     <h2 class="visually-hidden">Напишите нам</h2>
 
     <button class="modal__close" id="form-close" type="button">
@@ -532,8 +531,10 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
     <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
-    <a href="#" class=" button cart-modal__order">Оформить заказ</a>
-    <button class="button cart-modal__continue" id="cart-continue" type="button">Продолжить покупки</button>
+    <div class="cart-modal__buttons">
+      <a href="#" class="button cart-modal__order">Оформить заказ</a>
+      <a href="#" class="button cart-modal__continue">Продолжить покупки</a>
+    </div>
   </section>
 
   <script src="js/main.min.js"></script>

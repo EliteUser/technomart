@@ -1,0 +1,155 @@
+.filter {
+  width: 220px;
+}
+
+.filter__title {
+  @include fontSans();
+
+  margin: 0 0 11px 0;
+  padding: 10px 18px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: $page-yellow;
+  border-radius: 3px;
+}
+
+.filter__wrapper {
+  &:not(:first-child) {
+    border-top: 1px solid $light-border;
+  }
+}
+
+.filter__category {
+  @include fontSans();
+
+  display: block;
+  margin: 0 0 14px 0;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter__category--legend {
+  padding-top: 16px;
+}
+
+.filter__range-slider {
+  margin-bottom: 25px;
+}
+
+.filter__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter__list {
+  margin: 0 0 22px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.filter__label {
+  @include fontSans();
+
+  position: relative;
+  padding: 2px 0 0 35px;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter__checkbox {
+  & + .filter__label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 26px;
+    height: 23px;
+    background: url("../img/checkbox-off.svg") no-repeat left;
+    opacity: 0.75;
+  }
+
+  &:hover:not(:disabled) + .filter__label::before {
+    opacity: 1;
+  }
+
+  &:checked + .filter__label::before {
+    background: url("../img/checkbox-on.svg") no-repeat left;
+  }
+
+  &:disabled + .filter__label {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &:focus + .filter__label {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
+.filter__radio {
+  & + .filter__label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("../img/radio-off.svg") no-repeat left;
+    opacity: 0.8;
+  }
+
+  &:hover:not(:disabled) + .filter__label::before {
+    opacity: 1;
+  }
+
+  &:checked + .filter__label::before {
+    background: url("../img/radio-on.svg") no-repeat left;
+  }
+
+  &:disabled + .filter__label {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &:focus + .filter__label {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
+.filter__button {
+  @include fontSans();
+
+  margin-top: 57px;
+  width: 140px;
+  padding: 9px 0;
+  font-size: 13px;
+  color: $text;
+  background-color: $text-light;
+  border: 1px solid $light-border;
+
+  &:hover {
+    background-color: $text-light;
+    border-color: $light-border-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: $text-light;
+    border-color: $page-red;
+  }
+}
+
+

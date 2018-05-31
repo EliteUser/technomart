@@ -1,0 +1,63 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 21px 0 19px 0;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item:not(:last-child)::before {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background: url("../../img/right-icon-sm.svg") no-repeat;
+}
+
+.breadcrumbs__link {
+  @include fontSans();
+
+  display: block;
+  margin: 0 21px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text;
+
+  &[href]:hover {
+    color: $page-red;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+.breadcrumbs__icon {
+  fill: #c1c6ce;
+}
+
+.breadcrumbs__link--index {
+  padding-top: 1px;
+  margin: 0 22px 0 -2px;
+
+  &:hover {
+    .breadcrumbs__icon {
+      fill: $page-red;
+    }
+  }
+
+  &:active {
+    .breadcrumbs__icon {
+      fill: $page-red;
+      opacity: 0.6;
+    }
+  }
+}
