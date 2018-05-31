@@ -44,4 +44,18 @@
   &::after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $page-red-hover;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $page-red-active;
+    }
+  }
 }

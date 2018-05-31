@@ -502,20 +502,22 @@
     </button>
 
     <form class="form-modal__form" method="post" action="https://echo.htmlacademy.ru">
-      <p class="form-modal__input">
-        <label class="form-modal__label" for="form-username">Ваше имя:</label>
-        <input class="form-modal__input" type="text" name="name" id="form-username"
-               placeholder="Представьтесь, пожалуйста">
-      </p>
+      <div class="form-modal__wrapper">
+        <p class="form-modal__field">
+          <label class="form-modal__label" for="form-username">Ваше имя:</label>
+          <input class="form-modal__input" type="text" name="name" id="form-username"
+                 placeholder="Представьтесь, пожалуйста">
+        </p>
 
-      <p class="form-modal__input">
-        <label class="form-modal__label" for="form-email">Ваш e-mail:</label>
-        <input class="form-modal__input" type="email" name="email" id="form-email" placeholder="Для отправки ответа">
-      </p>
+        <p class="form-modal__field">
+          <label class="form-modal__label" for="form-email">Ваш e-mail:</label>
+          <input class="form-modal__input" type="email" name="email" id="form-email" placeholder="Для отправки ответа">
+        </p>
+      </div>
 
       <p class="form-modal__text">
         <label class="form-modal__label" for="form-message">Текст письма:</label>
-        <textarea class="form-modal__textarea" name="message" id="form-message" cols="30" rows="7"
+        <textarea class="form-modal__input form-modal__textarea" name="message" id="form-message"
                   placeholder="В свободной форме"></textarea>
       </p>
 
