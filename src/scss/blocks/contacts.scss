@@ -2,6 +2,13 @@
   width: 270px;
 }
 
+.contacts__telephone {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $text-light;
+}
+
 .contacts__telephone--block {
   position: relative;
   display: block;

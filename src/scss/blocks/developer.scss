@@ -1,0 +1,19 @@
+.developer {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-light;
+}
+
+.developer__link {
+  color: $text-yellow;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $page-red;
+    text-decoration: none;
+  }
+}
