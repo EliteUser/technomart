@@ -75,10 +75,10 @@
     width: 26px;
     height: 23px;
     background: url("../img/checkbox-off.svg") no-repeat left;
-    opacity: 0.75;
+    opacity: 0.8;
   }
 
-  &:hover:not(:disabled) + .filter__label::before {
+  &:not(:disabled) + .filter__label:hover::before {
     opacity: 1;
   }
 
@@ -109,7 +109,7 @@
     opacity: 0.8;
   }
 
-  &:hover:not(:disabled) + .filter__label::before {
+  &:not(:disabled) + .filter__label:hover::before {
     opacity: 1;
   }
 

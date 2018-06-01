@@ -73,17 +73,16 @@
 
 .page-footer__copyright {
   margin: 0;
-  max-width: 310px;
-  flex-grow: 1;
+  width: 310px;
   font-size: 16px;
   line-height: 18px;
   color: $text-light;
 }
 
 .page-footer__social {
-  flex-grow: 1;
-  max-width: 300px;
+  width: 300px;
   margin-right: auto;
+  align-self: flex-start;
 }
 
 .page-footer__developer {
