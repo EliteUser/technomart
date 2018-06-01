@@ -253,9 +253,9 @@
             <h2 class="visually-hidden">Сортировка товаров</h2>
             <b class="sort__title">Сортировка:</b>
 
-            <ul class="sort__list">
+            <ul class="sort__list sort__list--type">
               <li class="sort__item">
-                <a href="#" class="sort__option sort__option--active">По цене</a>
+                <a class="sort__option sort__option--active">По цене</a>
               </li>
 
               <li class="sort__item">
@@ -269,13 +269,19 @@
 
             <ul class="sort__list">
               <li class="sort__item">
-                <a href="#" class="sort__option sort__option--up sort__option--direction">
+                <a href="#" class="sort__option sort__option--direction sort__option--active">
+                  <svg class="sort__icon" width="11" height="10">
+                    <use xlink:href="#icon-up-dir"></use>
+                  </svg>
                   <span class="visually-hidden">По возрастанию</span>
                 </a>
               </li>
 
               <li class="sort__item">
-                <a href="#" class="sort__option sort__option--down">
+                <a href="#" class="sort__option sort__option--direction">
+                  <svg class="sort__icon" width="11" height="10">
+                    <use xlink:href="#icon-down-dir"></use>
+                  </svg>
                   <span class="visually-hidden">По убыванию</span>
                 </a>
               </li>
