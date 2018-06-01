@@ -5,8 +5,10 @@
   background-color: #333333;
 }
 
-.slider__controls {
-
+.slider--nojs {
+  .slider__controls {
+    display: none;
+  }
 }
 
 .slider__control {
@@ -70,9 +72,12 @@
   list-style: none;
 }
 
+.slider__slide {
+  display: none;
+}
+
 .slide {
   position: absolute;
-  z-index: -1;
   width: 100%;
   height: 100%;
   padding: 24px;
@@ -87,7 +92,7 @@
 }
 
 .slide--show {
-  z-index: 1;
+  display: block;
 }
 
 .slide__heading {
