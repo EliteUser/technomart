@@ -17,7 +17,6 @@
 .user-navigation__link {
   position: relative;
   display: block;
-  margin-bottom: 8px;
   padding: 12px 24px 12px;
   color: $text;
   background-color: $text-light;
@@ -46,14 +45,15 @@
 }
 
 .user-navigation__link--logout {
-  height: 45px;
+  height: 100%;
   padding: 0 22px;
 }
 
 .user-navigation__icon {
   position: absolute;
-  top: 14px;
+  top: 50%;
   left: 14px;
+  transform: translateY(-50%);
   opacity: 0.3;
 }
 
@@ -65,7 +65,7 @@
 
 .user-navigation__link--secondary {
   padding: 0 17px;
-  margin-bottom: 0;
+  margin: 8px 0 0;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;

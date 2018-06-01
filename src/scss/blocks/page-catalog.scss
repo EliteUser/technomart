@@ -9,3 +9,25 @@
   color: $page-blue;
   background-color: $page-light;
 }
+
+.page-catalog__description {
+  padding: 65px 0 68px 0;
+  background-color: $page-light;
+}
+
+.page-catalog__about {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.page-catalog__text {
+  @include fontSans();
+
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+}

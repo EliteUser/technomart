@@ -1,0 +1,56 @@
+.paginator {
+
+}
+
+.paginator__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paginator__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.paginator__item--hidden {
+  display: none;
+}
+
+.paginator__link {
+  @include fontSans();
+
+  display: block;
+  min-width: 38px;
+  padding: 9px 0;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text;
+  border: 1px solid $light-border;
+  border-radius: 3px;
+
+  &:hover:not(.paginator__link--active) {
+    border-color: $light-border-hover;
+  }
+
+  &:active:not(.paginator__link--active),
+  &:focus:not(.paginator__link--active) {
+    outline: none;
+    background-color: $text-light;
+    border-color: $page-red;
+  }
+}
+
+.paginator__link--active {
+  color: $text-light;
+  background-color: $page-red;
+  border-color: $page-red;
+}
+
+.paginator__link--wide {
+  min-width: 140px;
+}
+
+
