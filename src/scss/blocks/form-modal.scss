@@ -9,11 +9,26 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
     content: "";
     width: 100%;
     height: 112px;
     background-color: $page-light;
+  }
+}
+
+.form-modal--invalid {
+  animation-name: form-invalid;
+  animation-duration: 100ms;
+  animation-iteration-count: 5;
+}
+
+@keyframes form-invalid {
+  33% {
+    transform: translateX(-10px);
+  }
+
+  66% {
+    transform: translateX(10px);
   }
 }
 
@@ -60,8 +75,15 @@
 
   &:focus {
     outline: none;
+    color: $text;
+    background-color: $text-light;
     border-color: $page-red;
   }
+}
+
+.form-modal__input--invalid {
+  color: $text-light;
+  background-color: rgba(238, 54, 67, 0.3);
 }
 
 .form-modal__textarea {
@@ -71,6 +93,8 @@
 }
 
 .form-modal__submit {
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin-bottom: 37px;
 }

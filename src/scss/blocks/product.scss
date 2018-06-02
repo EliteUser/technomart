@@ -41,6 +41,10 @@
   background-color: $text-light;
 }
 
+.product__hover--show {
+  z-index: 1;
+}
+
 .product__buy-btn {
   position: relative;
   margin-bottom: 7px;

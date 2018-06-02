@@ -158,8 +158,8 @@
               <div class="range-slider filter__range-slider">
                 <div class="range-slider__wrapper">
                   <div class="range-slider__inner" id="range-slider">
-                    <div class="range-slider__control range-slider__control--left" id="control-left"></div>
-                    <div class="range-slider__control range-slider__control--right" id="control-right"></div>
+                    <div class="range-slider__control range-slider__control--left"></div>
+                    <div class="range-slider__control range-slider__control--right"></div>
                     <div class="range-slider__selected"></div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@
 
           <!-- Карточки с товарами -->
 
-          <ul class="catalog__list">
+          <ul class="catalog__list" id="catalog">
 
             <li class="catalog__item product">
               <div class="product__wrapper">
@@ -597,16 +597,18 @@
 
   <!-- Добавление в корзину -->
 
-  <section class="modal cart-modal">
-    <button class="modal__close" id="cart-close" type="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
-    <div class="cart-modal__buttons">
-      <a href="#" class="button cart-modal__order">Оформить заказ</a>
-      <a href="#" class="button cart-modal__continue">Продолжить покупки</a>
-    </div>
-  </section>
+  <div class="modal" id="cart-modal">
+    <section class="modal__inner cart-modal">
+      <button class="modal__close" id="cart-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
+      <div class="cart-modal__buttons">
+        <a href="#" class="button cart-modal__order">Оформить заказ</a>
+        <a href="#" class="button cart-modal__continue">Продолжить покупки</a>
+      </div>
+    </section>
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>

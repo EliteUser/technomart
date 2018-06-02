@@ -1,15 +1,37 @@
 .modal {
   position: fixed;
-  top: 50vh;
-  left: 50%;
-  display: none;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   z-index: 3;
-  margin: 0 auto;
+  display: none;
+  width: 100%;
+  height: 100vh;
 }
 
 .modal--show {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__inner {
+  position: relative;
+}
+
+.modal__inner--appear {
+  animation-name: modal--appear;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes modal--appear {
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modal__close {

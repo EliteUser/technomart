@@ -6,6 +6,8 @@
         content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Техномарт</title>
+  <link rel="preload" href="fonts/cuprum.woff2" as="font">
+  <link rel="preload" href="fonts/cuprumbold.woff2.woff2" as="font">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -155,7 +157,7 @@
                 <h3 class="slide__title">Дрели</h3>
                 <b class="slide__slogan">Соседям на радость!</b>
               </div>
-              <a href="#" class="button slide__catalog">Открыть каталог</a>
+              <a href="catalog.html" class="button slide__catalog">Открыть каталог</a>
             </li>
 
             <li class="slider__slide slide slide--puncher">
@@ -163,7 +165,7 @@
                 <h3 class="slide__title">Перфораторы</h3>
                 <b class="slide__slogan">Настоящие мужские игрушки</b>
               </div>
-              <a href="#" class="button slide__catalog">Открыть каталог</a>
+              <a href="catalog.html" class="button slide__catalog">Открыть каталог</a>
             </li>
           </ul>
         </div>
@@ -177,7 +179,7 @@
           <a href="#" class="button section-heading__btn">Все популярные товары</a>
         </div>
 
-        <ul class="popular-goods__list">
+        <ul class="popular-goods__list" id="catalog">
           <li class="popular-goods__item product">
             <div class="product__wrapper">
               <img class="product__image" src="img/product-1.png" width="180" height="78"
@@ -366,7 +368,7 @@
       <!-- О нас -->
 
       <section class="about-us">
-        <h2 class="about-us__title">Компания «Техномарт»</h2>
+        <h2 class="about-us__title">Компания &laquo;Техномарт&raquo;</h2>
         <p class="about-us__description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
           и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br></p>
         <p class="about-us__description">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
@@ -385,11 +387,11 @@
       <section class="contacts-block">
         <h2 class="contacts-block__title">Контакты</h2>
         <p class="contacts-block__description">Вы можете забрать товар сами, заехав&nbsp;в&nbsp;наш&nbsp;офис:</p>
-        <a href="https://goo.gl/maps/oHbsTwvqyA72" class="contacts-block__map">
+        <a href="https://goo.gl/maps/oHbsTwvqyA72" class="contacts-block__map" id="map-open">
           <img class="contacts-block__image" src="img/map.jpg" width="300" height="158"
                alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </a>
-        <a href="#" class="contacts-block__write-btn button">Заблудились? Напишите нам!</a>
+        <a href="#" class="contacts-block__write-btn button" id="form-open">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -478,64 +480,71 @@
 
   <!-- Всплывающая карта -->
 
-  <section class="modal map-modal">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
+  <div class="modal" id="map-modal">
+    <section class="modal__inner map-modal">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
 
-    <button class="modal__close" id="map-close" type="button">
-      <span class="visually-hidden">Закрыть карту</span>
-    </button>
-    <iframe class="map-modal__frame"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5963489855712!2d30.3207122!3d59.9388399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1527773951808"
-            width="940" height="446" allowfullscreen></iframe>
-    <img class="map-modal__image" src="img/map-big.jpg" width="940" height="446"
-         alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-  </section>
+      <button class="modal__close" id="map-close" type="button">
+        <span class="visually-hidden">Закрыть карту</span>
+      </button>
+      <iframe class="map-modal__frame" id="map-modal__frame"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5963489855712!2d30.3207122!3d59.9388399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1527773951808"
+              width="940" height="446" allowfullscreen></iframe>
+      <img class="map-modal__image" src="img/map-big.jpg" width="940" height="446"
+           alt="Наш офис по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    </section>
+  </div>
 
   <!-- Всплывающее окно -->
 
-  <section class="modal form-modal">
-    <h2 class="visually-hidden">Напишите нам</h2>
+  <div class="modal" id="form-modal">
+    <section class="modal__inner form-modal">
+      <h2 class="visually-hidden">Напишите нам</h2>
 
-    <button class="modal__close" id="form-close" type="button">
-      <span class="visually-hidden">Закрыть форму</span>
-    </button>
+      <button class="modal__close" id="form-close" type="button">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
 
-    <form class="form-modal__form" method="post" action="https://echo.htmlacademy.ru">
-      <div class="form-modal__wrapper">
-        <p class="form-modal__field">
-          <label class="form-modal__label" for="form-username">Ваше имя:</label>
-          <input class="form-modal__input" type="text" name="name" id="form-username"
-                 placeholder="Представьтесь, пожалуйста">
+      <form class="form-modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="form-modal__wrapper">
+          <p class="form-modal__field">
+            <label class="form-modal__label" for="form-username">Ваше имя:</label>
+            <input class="form-modal__input" type="text" name="name" id="form-username"
+                   placeholder="Представьтесь, пожалуйста">
+          </p>
+
+          <p class="form-modal__field">
+            <label class="form-modal__label" for="form-email">Ваш e-mail:</label>
+            <input class="form-modal__input" type="email" name="email" id="form-email"
+                   placeholder="Для отправки ответа">
+          </p>
+        </div>
+
+        <p class="form-modal__text">
+          <label class="form-modal__label" for="form-message">Текст письма:</label>
+          <textarea class="form-modal__input form-modal__textarea" name="message" id="form-message"
+                    placeholder="В свободной форме"></textarea>
         </p>
 
-        <p class="form-modal__field">
-          <label class="form-modal__label" for="form-email">Ваш e-mail:</label>
-          <input class="form-modal__input" type="email" name="email" id="form-email" placeholder="Для отправки ответа">
-        </p>
-      </div>
-
-      <p class="form-modal__text">
-        <label class="form-modal__label" for="form-message">Текст письма:</label>
-        <textarea class="form-modal__input form-modal__textarea" name="message" id="form-message"
-                  placeholder="В свободной форме"></textarea>
-      </p>
-
-      <button class="form-modal__submit button" type="submit">Отправить</button>
-    </form>
-  </section>
+        <button class="form-modal__submit button" type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
 
   <!-- Добавление в корзину -->
 
-  <section class="modal cart-modal">
-    <button class="modal__close" id="cart-close" type="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
-    <div class="cart-modal__buttons">
-      <a href="#" class="button cart-modal__order">Оформить заказ</a>
-      <a href="#" class="button cart-modal__continue">Продолжить покупки</a>
-    </div>
-  </section>
+  <div class="modal" id="cart-modal">
+    <section class="modal__inner cart-modal">
+      <button class="modal__close" id="cart-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="cart-modal__title">Товар добавлен в корзину!</h2>
+      <div class="cart-modal__buttons">
+        <a href="#" class="button cart-modal__order">Оформить заказ</a>
+        <a href="#" class="button cart-modal__continue">Продолжить покупки</a>
+      </div>
+    </section>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

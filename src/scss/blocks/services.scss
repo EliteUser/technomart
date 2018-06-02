@@ -70,6 +70,7 @@
 .services__btn--active {
   color: $page-blue;
   background-color: $text-light;
+  border-color: $text-light;
   cursor: auto;
 
   &:hover {
@@ -96,15 +97,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  display: none;
   width: 100%;
   height: auto;
   padding: 45px 80px;
 }
 
 .services__item--active {
-  position: static;
-  z-index: 1;
+  display: block;
 }
 
 .services__item--delivery {

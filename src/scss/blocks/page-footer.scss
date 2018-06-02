@@ -26,7 +26,8 @@
 
 .page__footer__site-navigation {
   .site-navigation__link {
-    padding: 0 29.5px;
+    padding: 0;
+    margin: 0 29.5px;
     font-size: 18px;
     background-color: transparent;
     box-shadow: none;
@@ -41,10 +42,12 @@
   }
 
   .site-navigation__item:first-child > .site-navigation__link {
+    margin-left: 0;
     padding-left: 0;
   }
 
   .site-navigation__item:last-child > .site-navigation__link {
+    margin-right: 0;
     padding-right: 0;
   }
 }
