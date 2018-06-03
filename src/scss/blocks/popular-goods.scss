@@ -9,12 +9,12 @@
 .popular-goods__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 -10px -20px;
   padding: 0;
   list-style: none;
 }
 
 .popular-goods__item {
   position: relative;
-  margin: 0 10px;
+  margin: 0 10px 20px;
 }
