@@ -9,15 +9,21 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const autoprefixer = require("autoprefixer");
 const minify = require("gulp-csso");
+const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
-const run = require("run-sequence");
 const del = require("del");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
-const uglifyJs = require("gulp-uglifyjs");
+const uglifyJs = require("gulp-uglify");
+const gulpIf = require("gulp-if");
+const sourcemaps = require("gulp-sourcemaps");
+const argv = require("yargs").argv;
+
+const isProduction = ( argv.production !== undefined );
+const ghpages = require("gh-pages");
 
 /* Директории: исходники и сборка */
 
@@ -30,13 +36,18 @@ const config = {
 
 gulp.task("browserSync", function () {
   browserSync.init({
-    server: config.build
+    server: config.build,
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
   });
 
-  gulp.watch(`${config.src}/scss/**/*.{scss,sass}`, ["style"]);
-  gulp.watch(`${config.src}/js/**/*.js`, ["js"]);
-  gulp.watch(`${config.src}/*.html`, ["html"]);
-  gulp.watch(`${config.build}/**/*.*`).on('change', browserSync.reload);
+  gulp.watch(`${config.src}/scss/**/*.{scss,sass}`, gulp.series("style"));
+  gulp.watch(`${config.src}/js/**/*.js`, gulp.series("js"));
+  gulp.watch(`${config.src}/**/*.html`, gulp.series("html"));
+  gulp.watch(`${config.src}/**/*.svg`, gulp.series("build"));
+  gulp.watch(`${config.build}/**/*.*`).on("change", browserSync.reload);
 });
 
 /* Сборка стилей и минификация */
@@ -44,26 +55,23 @@ gulp.task("browserSync", function () {
 gulp.task("style", function () {
   return gulp.src(`${config.src}/scss/style.scss`)
     .pipe(plumber())
+    .pipe(
+      gulpIf(!isProduction, sourcemaps.init())
+    )
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: "expanded"
     }))
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest(`${config.build}/css`))
-    .pipe(minify())
+    .pipe(minify({
+      restructure: false
+    }))
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest(`${config.build}/css`));
-});
-
-/* Normalize.css */
-
-gulp.task("normalize", function () {
-  return gulp.src(`${config.src}/scss/normalize.scss`)
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(minify())
-    .pipe(rename("normalize.min.css"))
+    .pipe(
+      gulpIf(!isProduction, sourcemaps.write("../css"))
+    )
     .pipe(gulp.dest(`${config.build}/css`));
 });
 
@@ -72,10 +80,8 @@ gulp.task("normalize", function () {
 gulp.task("js", function () {
   return gulp.src(`${config.src}/js/**/*.js`)
     .pipe(plumber())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(concat('main.js'))
+    .pipe(babel())
+    .pipe(concat("main.js"))
     .pipe(gulp.dest(`${config.build}/js`))
     .pipe(uglifyJs())
     .pipe(rename("main.min.js"))
@@ -109,7 +115,7 @@ gulp.task("webp", function () {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest(`${config.src}/img`));
+    .pipe(gulp.dest(`${config.src}/img/webp`));
 });
 
 /* Сборка SVG спрайта */
@@ -132,7 +138,10 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest(config.build))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest(config.build));
 });
 
 /* Удаление папки с билдом */
@@ -147,7 +156,6 @@ gulp.task("copy", function () {
   return gulp.src([
     `${config.src}/fonts/**/*.{woff,woff2}`,
     `${config.src}/img/**`,
-    // `${config.src}/js/**`
   ], {
     base: config.src
   })
@@ -156,15 +164,16 @@ gulp.task("copy", function () {
 
 /* Сборка проекта */
 
-gulp.task("build", function (done) {
-  run(
-    "clean",
-    "copy",
-    "normalize",
-    "style",
-    "sprite",
-    "html",
-    "js",
-    done
-  );
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "style",
+  "sprite",
+  "html",
+  "js",
+  )
+);
+
+gulp.task("gh-pages", function () {
+  return ghpages.publish(config.build, function(err) {});
 });
